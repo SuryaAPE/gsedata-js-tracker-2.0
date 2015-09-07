@@ -1,0 +1,42 @@
+{
+   "title":"App Schema",
+   "id":"/app",
+   "type":"object",
+   "properties":{
+      "appID":{
+         "type":"string"
+      },
+      "sdkVersion":{
+         "type":"string"
+      },
+      "appPlatform":{
+         "type":"string"
+      },
+      "url":{
+         "type":"string",
+         "format":"url"
+      },
+      "cookieDomainName":{
+         "type":"string"
+      },
+      "cookiePrefix":{
+         "type":"string"
+      },
+      "environment":{
+         "type":"string",
+         "enum":[
+            "development",
+            "test",
+            "stage",
+            "production"
+         ]
+      },
+      "autotracking":{
+         "type":"array"
+      }
+   },
+   "required":[
+      "appID"
+   ],
+   "additionalProperties":true
+}
